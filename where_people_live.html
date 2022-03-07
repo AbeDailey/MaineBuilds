@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Coded by Abraham Dailey, adailey@gpcog.org, for Maine Builds 02/22/2022 -->
+<!-- Based on Start Page template from W3 Schools: https://www.w3schools.com/w3css/tryw3css_templates_start_page.htm -->
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Maine Builds Where People Live</title>
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif}
+.w3-bar,h1,button {font-family: "Verdana", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+img {vertical-align: middle;}
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+</style>
+
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="https://www.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
+    <a href="https://www.mainebuilds.org/map.html" class="w3-bar-item  w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Map</a>
+    <a href="https://www.mainebuilds.org/where_people_live.html" class="w3-bar-item w3-light-gray w3-button w3-hide-small w3-padding-large w3-hover-blue">Context</a>
+    <a href="https://progress.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Progress</a>
+    <a href="https://survey.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Survey</a>
+    <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Contact</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="https://www.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="https://www.mainebuilds.org/map.html" class="w3-bar-item w3-button w3-padding-large">Map</a>
+    <a href="https://progress.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Progress</a>
+    <a href="https://survey.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Survey</a>
+    <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+  </div>
+
+
+
+<!-- Context Navbar -->
+
+  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="https://www.mainebuilds.org/where_people_live.html" class="w3-bar-item w3-light-gray w3-button w3-hide-small w3-padding-large w3-hover-blue">Where People Live</a>
+    <a href="https://www.mainebuilds.org/where_people_work.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large  w3-hover-light-gray">Where People Work</a>
+    <a href="https://www.mainebuilds.org/access_to_services.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Services</a>
+    <a href="https://www.mainebuilds.org/access_to_nature.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Nature</a>
+    <a href="https://www.mainebuilds.org/access_to_transit.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Transit</a>
+    <a href="https://www.mainebuilds.org/policies.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Policies</a>
+  </div>
+  
+  
+<!-- Context Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="https://www.mainebuilds.org/where_people_live.html" class="w3-bar-item w3-button w3-padding-large">People</a>
+    <a href="https://www.mainebuilds.org/where_people_work.html" class="w3-bar-item w3-button w3-padding-large">Jobs</a>
+    <a href="https://www.mainebuilds.org/access_to_services.html" class="w3-bar-item w3-button w3-padding-large">Services/a>
+    <a href="https://www.mainebuilds.org/access_to_nature.html" class="w3-bar-item w3-button w3-padding-large">Nature</a>
+    <a href="https://www.mainebuilds.org/access_to_transit.html" class="w3-bar-item w3-button w3-padding-large">Transit</a>
+    <a href="https://www.mainebuilds.org/policies.html" class="w3-bar-item w3-button w3-padding-large">Policies</a>
+  </div>
+</div>
+
+<style>.embed-container {position: relative; height: 700px; max-width: 100%;  margin-top:102px;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; } small{position: absolute; z-index: 40; bottom: 0; margin-bottom: 0px;}</style><div class="embed-container"><iframe width='100%' height='100%' src='https://gpcog.maps.arcgis.com/apps/View/index.html?appid=86d0930f7d1b421c92267c62bd4a5261' frameborder='0' scrolling='no'></iframe></div>
+
+
+<p>Please note, this map is still under construction.</p>
+
+<!-- Footer --> 
+<footer class="w3-container  w3-center w3-opacity">  
+ <p>Powered by <a href="https://www.gpcog.org" target="_blank"><img src="images/logos/gpcog.png" alt="GPCOG" class="center" style="width:150px; height:55px;"></a></p>
+</footer>
+
+
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
