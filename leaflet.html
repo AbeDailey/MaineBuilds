@@ -1,89 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Coded by Abraham Dailey, adailey@gpcog.org, for Maine Builds 02/22/2022 -->
+<!-- Coded by Abraham Dailey for Maine Builds 02/22/2022 -->
 
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Maine Builds Leaflet Map</title>
+    <title>Maine Builds Leaflet Map</title>
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-<link rel="stylesheet" href="/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="css_01_formating.css">
+    <link rel="stylesheet" href="css_02_elements.css">
+    <link rel="stylesheet" href="css_03_layout.css">
+    <link rel="stylesheet" href="css_04_colors.css">
+    <link rel="stylesheet" href="css_05_animation.css">
 
-<!-- <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' /> -->
+    <link rel="stylesheet" href="/leaflet/leaflet.css" />
 
-<script src="/leaflet/leaflet.js"></script>
+    <!-- <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' /> -->
 
-<!-- <script src="leaflet.ajax.min.js"></script> -->
+    <script src="/leaflet/leaflet.js"></script>
 
-<script src="jquery-2.1.1.min.js"></script> 
+    <!-- <script src="leaflet.ajax.min.js"></script> -->
 
-<script src="permits.geojson" type="application/geo+json"></script>
+    <script src="jquery-2.1.1.min.js"></script>
 
-<!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script> -->
+    <script src="permits.geojson" type="application/geo+json"></script>
+
+    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script> -->
 
 </head>
 
 
 <body>
 
-<div id='map' style='width: 800px; height: 800px;'></div>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
+            <a href="https://www.mainebuilds.org/map.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Map</a>
+            <!-- <a href="where_people_work.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Context</a> -->
+            <a href="https://www.mainebuilds.org/progress/westbrook.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Progress</a>
+            <a href="https://survey.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Survey</a>
+            <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Contact</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="https://www.mainebuilds.org/map.html" class="w3-bar-item w3-button w3-padding-large">Map</a>
+            <a href="https://www.mainebuilds.org/progress/westbrook.html" class="w3-bar-item w3-button w3-padding-large">Progress</a>
+            <a href="https://survey.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Survey</a>
+            <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+        </div>
+    </div>
 
 
-<script>
-
-// initialize the map
-var map = L.map('map').setView([43.8006, -70.1867], 13);
-
-// load a tile layer
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'daileya/ckzz5ekso000315rt79lwfeqk',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoiZGFpbGV5YSIsImEiOiJjamU1cmFvaWI1ZW93MnZtdWYzZzA4ZnM5In0.hi1a2TNDosip9SaKYhTI7g'
-}).addTo(map);
+    <div id='map' style='width: 800px; height: 800px;'></div>
 
 
-var geojsonMarkerOptions = {
-    radius: 4,
-    fillColor: "#003f67",
-    color: "#003f67",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 1
-};
+    <script>
+        // initialize the map
+        var map = L.map('map').setView([43.8006, -70.1867], 13);
+
+        // load a tile layer
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'daileya/ckzz5ekso000315rt79lwfeqk',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiZGFpbGV5YSIsImEiOiJjamU1cmFvaWI1ZW93MnZtdWYzZzA4ZnM5In0.hi1a2TNDosip9SaKYhTI7g'
+        }).addTo(map);
 
 
-
-//load GeoJSON from an external file
-$.getJSON("permits.geojson",function(data){
-     //add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data, {
-        pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, geojsonMarkerOptions);
-        }
-    }).addTo(map);
-  });
+        var geojsonMarkerOptions = {
+            radius: 4,
+            fillColor: "#003f67",
+            color: "#003f67",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 1
+        };
 
 
 
-//load GeoJSON from an external file
-//$.getJSON("permits.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-//    L.geoJson(data).addTo(map);
-//  });
+        //load GeoJSON from an external file
+        $.getJSON("permits.geojson", function(data) {
+            //add GeoJSON layer to the map once the file is loaded
+            L.geoJson(data, {
+                pointToLayer: function(feature, latlng) {
+                    return L.circleMarker(latlng, geojsonMarkerOptions);
+                }
+            }).addTo(map);
+        });
 
-</script>
+
+
+        //load GeoJSON from an external file
+        //$.getJSON("permits.geojson",function(data){
+        // add GeoJSON layer to the map once the file is loaded
+        //    L.geoJson(data).addTo(map);
+        //  });
+    </script>
 
 
 
-<!-- map box script
+    <!-- map box script
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFpbGV5YSIsImEiOiJjamU1cmFvaWI1ZW93MnZtdWYzZzA4ZnM5In0.hi1a2TNDosip9SaKYhTI7g';
 var map = new mapboxgl.Map({
@@ -95,4 +122,5 @@ style: 'mapbox://styles/daileya/ckzz5maz5000315qo1hb5ib00'
 
 
 </body>
+
 </html>

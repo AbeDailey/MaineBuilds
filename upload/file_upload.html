@@ -8,15 +8,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Maine Builds Signup</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Maine Builds File Upload</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
-    <link rel="stylesheet" href="css_01_formating.css">
-    <link rel="stylesheet" href="css_02_elements.css">
-    <link rel="stylesheet" href="css_03_layout.css">
-    <link rel="stylesheet" href="css_04_colors.css">
-    <link rel="stylesheet" href="css_05_animation.css">
-    <link rel="stylesheet" href="css_06_media_queries.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHCZQG751W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BHCZQG751W');
+    </script>
+
+    <link rel="stylesheet" href="../css_01_formating.css">
+    <link rel="stylesheet" href="../css_02_elements.css">
+    <link rel="stylesheet" href="../css_03_layout.css">
+    <link rel="stylesheet" href="../css_04_colors.css">
+    <link rel="stylesheet" href="../css_05_animation.css">
+    <link rel="stylesheet" href="../css_06_media_queries.css">
 
 </head>
 
@@ -49,29 +62,6 @@
             font-size: 11px
         }
     }
-    
-    .embed-container {
-        position: relative;
-        height: 1300px;
-        max-width: 100%;
-        margin-top: 0px;
-    }
-    
-    .embed-container iframe,
-    .embed-container object,
-    .embed-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-    
-    small {
-        position: absolute;
-        z-index: 40;
-        bottom: 0;
-        margin-bottom: 0px;
-    }
 </style>
 
 
@@ -81,41 +71,73 @@
     <div class="w3-top" style="position:fixed; top:0; left:0; right:0; height:51px;">
         <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
-            <a href="map.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Map</a>
+            <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
+            <a href="../map.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Map</a>
             <a href="progress/westbrook.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Progress</a>
-            <a href="upload/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Upload Data</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-light-gray w3-hide-small w3-padding-large w3-hover-light-gray">Request Account</a>
+            <a href="../upload/index.html" class="w3-bar-item w3-button w3-light-gray w3-hide-small w3-padding-large w3-hover-light-gray">Upload Data</a>
+            <a href="../signup.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Request Account</a>
             <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Contact</a>
         </div>
 
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-            <a href="map.html" class="w3-bar-item w3-button w3-padding-large">Map</a>
-            <a href="progress/westbrook.html" class="w3-bar-item w3-button w3-padding-large">Progress</a>
-            <a href="upload/index.html" class="w3-bar-item w3-button w3-padding-large">Upload Data</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Request Account</a>
+            <a href="../map.html" class="w3-bar-item w3-button w3-padding-large">Map</a>
+            <a href="../progress/westbrook.html" class="w3-bar-item w3-button w3-padding-large">Progress</a>
+            <a href="../upload/index.html" class="w3-bar-item w3-button w3-padding-large">Upload Data</a>
+            <a href="../signup.html" class="w3-bar-item w3-button w3-padding-large">Request Account</a>
             <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-padding-large">Contact</a>
         </div>
     </div>
 
-
-    <!-- Header -->
-    <header class="w3-container w3-center" alt="A map showing priority centers in the Portland region." style="margin-top:50px; padding: 96px 16px; background-image:url('images/map_home.jpg'); background-size:cover">
+    <header class="w3-container w3-center" alt="A map showing priority centers in the Portland region." style="margin-top:50px; padding: 96px 16px; background-image:url('../images/map_home.jpg'); background-size:cover">
         <h1 class="w3-margin w3-jumbo">Maine Builds</h1>
     </header>
 
 
-    <div class="embed-container">
-        <iframe width="100%" height="100%" src="https://forms.office.com/Pages/ResponsePage.aspx?id=I85j9Whbi06NgZNqYJfkoIFh4j2wIRJFqhCXu8Jf6VNUNUFNT1o5MVpITUVTS1JSQ1BSVDRSWkQySS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100%; overflow:hidden;"> </iframe>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-container">
+
+        <style>
+            .embed-container {
+                position: relative;
+                height: 820px;
+                max-width: 100%;
+            }
+            
+            .embed-container iframe,
+            .embed-container object,
+            .embed-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            
+            small {
+                position: absolute;
+                z-index: 40;
+                bottom: 0;
+                margin-bottom: 0px;
+            }
+        </style>
+        <div class="embed-container"><iframe name="survey123webform" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Metro Regional Coalition Building Permit Data Upload Form" src="//survey123.arcgis.com/share/1e334d6b79124903a68e62f0e138706b" allow="geolocation https://survey123.arcgis.com; camera https://survey123.arcgis.com"></iframe></div>
+        <script>
+            var survey123webform = document.getElementsByName('survey123webform')[0];
+            window.addEventListener("message", e => {
+                if (e.data) {
+                    var t = JSON.parse(e.data);
+                    "survey123:webform:formLoaded" === t.event && t.contentHeight && (survey123webform.parentNode.style.height = t.contentHeight + "px") && (survey123webform.parentNode.style["padding-bottom"] = "unset")
+                }
+            });
+        </script>
 
     </div>
 
-
     <!-- Footer -->
-    <footer class=" w3-bar w3-blue w3-center " style="position:absolute;">
+    <footer class="w3-bar w3-container w3-blue w3-center " style="position:absolute;">
         <p class="w3-center">Powered by
-            <a href="https://www.gpcog.org" target="_blank"><img src="images/logos/gpcog_white.png" alt="GPCOG" class="center" style="width:150px; height:55px;"></a>
+            <a href="https://www.gpcog.org" target="_blank"><img src="../images/logos/gpcog_white.png" alt="GPCOG" class="center" style="width:150px; height:55px;"></a>
         </p>
 
         <div class="w3-row-padding w3-padding-16 w3-container">
@@ -150,7 +172,7 @@
         .goog-te-balloon * {
             font-family: arial;
             font-size: 10pt;
-            background-image: url("images/Google.png");
+            background-image: url("../images/Google.png");
             background-position: 3px 4px;
             background-size: 22px;
             background-repeat: no-repeat;
@@ -226,6 +248,18 @@
 
 
     <!--------------End Google Translate----------------->
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
 
 </body>
 

@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Maine Builds Access to Transit</title>
+<title>Maine Builds Map</title>
  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
@@ -23,7 +23,65 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif}
 
 img {vertical-align: middle;}
 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
 
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.0s;
+  animation-name: fade;
+  animation-duration: 1.0s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -41,7 +99,6 @@ img {vertical-align: middle;}
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="https://www.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
     <a href="https://www.mainebuilds.org/map.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Map</a>
-    <a href="https://www.mainebuilds.org/where_people_live.html" class="w3-bar-item w3-light-gray w3-button w3-hide-small w3-padding-large w3-hover-blue">Context</a>
     <a href="https://progress.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Progress</a>
     <a href="https://survey.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Survey</a>
     <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Contact</a>
@@ -50,42 +107,13 @@ img {vertical-align: middle;}
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="https://www.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <a href="https://www.mainebuilds.org/map.html" class="w3-bar-item w3-button w3-padding-large">Map</a>
     <a href="https://progress.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Progress</a>
     <a href="https://survey.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Survey</a>
     <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-padding-large">Contact</a>
   </div>
-
-
-
-<!-- Context Navbar -->
-
-  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="https://www.mainebuilds.org/where_people_live.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Where People Live</a>
-    <a href="https://www.mainebuilds.org/where_people_work.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Where People Work</a>
-    <a href="https://www.mainebuilds.org/access_to_services.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Services</a>
-    <a href="https://www.mainebuilds.org/access_to_nature.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Nature</a>
-    <a href="https://www.mainebuilds.org/access_to_transit.html" class="w3-bar-item w3-light-gray w3-button w3-hide-small w3-padding-large w3-hover-blue">Transit</a>
-    <a href="https://www.mainebuilds.org/policies.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Policies</a>
-  </div>
-  
-  
-<!-- Context Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="https://www.mainebuilds.org/where_people_live.html" class="w3-bar-item w3-button w3-padding-large">People</a>
-    <a href="https://www.mainebuilds.org/where_people_work.html" class="w3-bar-item w3-button w3-padding-large">Jobs</a>
-    <a href="https://www.mainebuilds.org/access_to_services.html" class="w3-bar-item w3-button w3-padding-large">Services/a>
-    <a href="https://www.mainebuilds.org/access_to_nature.html" class="w3-bar-item w3-button w3-padding-large">Nature</a>
-    <a href="https://www.mainebuilds.org/access_to_transit.html" class="w3-bar-item w3-button w3-padding-large">Transit</a>
-    <a href="https://www.mainebuilds.org/policies.html" class="w3-bar-item w3-button w3-padding-large">Policies</a>
-  </div>
 </div>
 
-<style>.embed-container {position: relative; height: 700px; max-width: 100%;  margin-top:102px;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; } small{position: absolute; z-index: 40; bottom: 0; margin-bottom: 0px;}</style><div class="embed-container"><iframe width='100%' height='100%' src='https://gpcog.maps.arcgis.com/apps/View/index.html?appid=76a90ae75b9748f09ad3faa488cc29b7' frameborder='0' scrolling='no'></iframe></div>
-
-
-<p>Please note, this map is still under construction.</p>
+<style>.embed-container {position: relative; height: 700px; max-width: 100%;  margin-top:50px;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; } small{position: absolute; z-index: 40; bottom: 0; margin-bottom: 0px;}</style><div class="embed-container"><iframe width='100%' height='100%' src='https://gpcog.maps.arcgis.com/apps/dashboards/5d5107d932f74d96908bfbea51547b0f' frameborder='0' scrolling='no'></iframe></div>
 
 <!-- Footer --> 
 <footer class="w3-container  w3-center w3-opacity">  
