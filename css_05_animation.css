@@ -8,15 +8,24 @@
     background-color: #ccc!important
 }
 
+.w3-button-map:hover {
+    color: #000!important;
+    background-color: #ccc!important
+}
 
-/* .w3-button:focus {
-    color:#003f67!important;
-    background-color:#eef0ee!important
-} */
+.w3-button:focus {
+    color: #003f67!important;
+    background-color: #eef0ee!important
+}
 
 .w3-button-map:focus {
     color: #003f67!important;
     background-color: #eef0ee!important
+}
+
+.w3-button-map:focus:hover {
+    color: #000!important;
+    background-color: #ccc!important
 }
 
 .w3-transparent,

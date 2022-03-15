@@ -1,208 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Coded by Abraham Dailey, adailey@gpcog.org, for Maine Builds 02/22/2022 -->
+<!-- Coded by Abraham Dailey for Maine Builds 02/22/2022 -->
 <!-- Based on Start Page template from W3 Schools: https://www.w3schools.com/w3css/tryw3css_templates_start_page.htm -->
 
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Maine Builds</title>
- <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Maine Builds</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHCZQG751W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BHCZQG751W');
+    </script>
+
+    <link rel="stylesheet" href="css_01_formating.css">
+    <link rel="stylesheet" href="css_02_elements.css">
+    <link rel="stylesheet" href="css_03_layout.css">
+    <link rel="stylesheet" href="css_04_colors.css">
+    <link rel="stylesheet" href="css_05_animation.css">
+    <link rel="stylesheet" href="css_06_media_queries.css">
+
 </head>
 
-
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif}
-.w3-bar,h1,button {font-family: "Verdana", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.0s;
-  animation-name: fade;
-  animation-duration: 1.0s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .8} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .8} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-
-
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Arial", sans-serif
+    }
+    
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+    
+    body {
+        top: 0px !important;
+    }
+    
+    img {
+        vertical-align: middle;
+    }
+    /* Slideshow container */
+    
+    .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+    }
+    
+    .active {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.0s;
+        animation-name: fade;
+        animation-duration: 1.0s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .8
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .8
+        }
+        to {
+            opacity: 1
+        }
+    }
+    /* On smaller screens, decrease text size */
+    
+    @media only screen and (max-width: 300px) {
+        .text {
+            font-size: 11px
+        }
+    }
 </style>
 
 
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
-    <a href="https://www.mainebuilds.org/map.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Map</a>
-    <a href="context/where_people_work.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Context</a>
-    <a href="https://progress.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Progress</a>
-    <a href="https://survey.mainebuilds.org" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Survey</a>
-    <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Contact</a>
-  </div>
+    <!-- Navbar -->
+    <div class="w3-top" style="position:fixed; top:0; left:0; right:0; height:51px;">
+        <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-light-gray w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
+            <a href="map.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Map</a>
+            <a href="progress/westbrook.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Progress</a>
+            <a href="upload/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Upload Data</a>
+            <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Request Account</a>
+            <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Contact</a>
+        </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="https://www.mainebuilds.org/map.html" class="w3-bar-item w3-button w3-padding-large">Map</a>
-    <a href="https://progress.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Progress</a>
-    <a href="https://survey.mainebuilds.org" class="w3-bar-item w3-button w3-padding-large">Survey</a>
-    <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-padding-large">Contact</a>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="w3-container w3-center" style="padding:128px 16px; background-image:url('images/map_home.jpg'); background-size:cover">
-  <h1 class="w3-margin w3-jumbo">Maine Builds</h1>
-  <!-- <p class="w3-xlarge">A Project of GPCOG</p> -->
- <!-- <button class="w3-button w3-blue w3-padding-large w3-large w3-margin-top"><a href="https://progress.mainebuilds.org">View Progress</a></button>  -->
-</header>
-
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Welcome to Maine Builds</h1>
-      <h5 class="w3-padding-32">GPCOG is tracking housing production in Maine. Join our movement.</h5>
-
-      <p class="w3-text-grey">Request an <a href="signup.html" target="_blank">account</a>. Take our <a href="https://survey.mainebuilds.org">survey</a>. View <a href="https://progress.mainebuilds.org">progress.</a></p>
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="map.html" class="w3-bar-item w3-button w3-padding-large">Map</a>
+            <a href="progress/westbrook.html" class="w3-bar-item w3-button w3-padding-large">Progress</a>
+            <a href="upload/index.html" class="w3-bar-item w3-button w3-padding-large">Upload Data</a>
+            <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Request Account</a>
+            <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+        </div>
     </div>
 
-    <div class="w3-third w3-center" style="width:300px; height:161px;">
-    	<div class="slideshow-container" >
-			<div class="mySlides fade">
-  				<img src="images/houses/1.jpg" style="width:300px; height:161px;">
-			</div>
-			<div class="mySlides fade">
- 				 <img src="images/houses/2.jpg" style="width:300px; height:161px;">
-			</div>
-			<div class="mySlides fade">
-  				<img src="images/houses/3.jpg" style="width:300px; height:161px;">
-			</div>
-			<div class="mySlides fade">
- 				<img src="images/houses/4.jpg" style="width:300px; height:161px;">
-			</div>
-			<div class="mySlides fade">
- 				<img src="images/houses/5.jpg" style="width:225px; height:250px;">
-			</div>
-			<div class="mySlides fade">
- 				<img src="images/houses/6.jpg" style="width:225px; height:250px;">
-			</div>
-			<div class="mySlides fade">
- 				<img src="images/houses/8.jpg" style="width:225px; height:250px;">
-			</div>
-	</div>
+    <!-- Header -->
+    <header class="w3-container w3-center" alt="A map showing priority centers in the Portland region." style="margin-top:50px; padding: 96px 16px; background-image:url('images/map_home.jpg'); background-size:cover">
+        <h1 class="w3-margin w3-jumbo">Maine Builds</h1>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Welcome to Maine Builds</h1>
+                <h5 class="w3-padding-32">GPCOG is tracking housing production in Maine. Join our movement.</h5>
+
+                <p class="w3-text-grey">Request an <a href="signup.html" target="_blank">account</a>. Take our <a href="https://survey.mainebuilds.org">survey</a>. View <a href="https://progress.mainebuilds.org">progress.</a></p>
+            </div>
+
+            <div class="w3-third w3-center" style="width:300px; height:161px;">
+                <div class="slideshow-container" alt="A slideshow showing houses expanding and communities growing.">
+                    <div class="mySlides fade">
+                        <img src="images/houses/1.jpg" alt="A drawing of a house under construction." style="width:300px; height:161px;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/houses/2.jpg" alt="A drawing of a house with a new addition." style="width:300px; height:161px;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/houses/3.jpg" alt="A drawing of a house after construction is complete." style="width:300px; height:161px;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/houses/4.jpg" alt="A drawing of a house with a new accessory dwelling unit." style="width:300px; height:161px;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/houses/5.jpg" alt="A picture of one development scenario." style="width:225px; height:250px;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/houses/6.jpg" alt="A picture of an alterative development scenario." style="width:225px; height:250px;">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/houses/8.jpg" alt="A picture of a third development scenario." style="width:225px; height:250px;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w3-container w3-blue w3-center w3-opacity w3-padding-48">
+        <h1 class="w3-margin w3-xlarge">A walkable community has to have useful things for people to walk to.</h1>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-bar w3-blue w3-center " style="position:absolute;">
+        <p class="w3-center">Powered by
+            <a href="https://www.gpcog.org" target="_blank"><img src="images/logos/gpcog_white.png" alt="GPCOG" class="center" style="width:150px; height:55px;"></a>
+        </p>
+
+        <div class="w3-row-padding w3-padding-16 w3-container">
+            <div class="w3-content">
+                <div class="w3-third">
+                    <a href="website_accessibility.html">Accessibility</a>
+                </div>
+                <div class="w3-third">
+                    <a href="privacy_policy.html">Privacy Policy</a>
+                </div>
+                <div class="w3-third">
+                    <a href="license.html">License</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Footer -->
+    <!--     <footer class="w3-container w3-blue w3-center ">
+        <p class="w3-center">Powered by
+            <a href="https://www.gpcog.org" target="_blank"><img src="images/logos/gpcog_white.png" alt="GPCOG" class="center" style="width:150px; height:55px;"></a>
+        </p>
+
+        <div class="w3-row-padding w3-padding-16 w3-container">
+            <div class="w3-content">
+                <div class="w3-quarter">
+                    <a href="website_accessibility.html">Accessibility</a>
+                </div>
+                <div class="w3-quarter">
+                    <a href="privacy_policy.html">Privacy Policy</a>
+                </div>
+                <div class="w3-quarter">
+                    <a href="license.html">License</a>
+                </div>
+                <div class="w3-quarter">
+                    <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request">Contact</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>  -->
+
+
+    <!----------Google Translate (Mobile Friendly)--------->
+
+    <style>
+        #google-translate-container {
+            float: right;
+            padding: 3px 5px 0px 0px;
+        }
+        
+        .goog-te-combo,
+        .goog-te-banner *,
+        .goog-te-ftab *,
+        .goog-te-menu *,
+        .goog-te-menu2 *,
+        .goog-te-balloon * {
+            font-family: arial;
+            font-size: 10pt;
+            background-image: url("images/Google.png");
+            background-position: 3px 4px;
+            background-size: 22px;
+            background-repeat: no-repeat;
+            text-indent: 20px;
+            background-color: #fff;
+            color: #000 !important;
+        }
+        
+        .goog-logo-link {
+            display: none !important;
+        }
+        
+        .goog-te-gadget {
+            color: transparent !important;
+        }
+        
+        .goog-te-gadget .goog-te-combo {
+            margin: 2px 0 !important;
+            border-radius: 15px !important;
+        }
+        
+        .goog-te-combo {
+            border: 1px solid !important;
+            border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;
+            border-radius: 0 !important;
+            height: 32px;
+            !important;
+            padding: 0 1px 0 .25rem !important;
+        }
+        
+        #launcher-wrapper {
+            bottom: 50px !important;
+        }
+    </style>
+
+    <div id="google-translate-container">
+
+        <div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"></div>
 
     </div>
-  </div>
-</div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+
+            new google.translate.TranslateElement({
+                pageLanguage: "en",
+                autoDisplay: false,
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, "google_translate_element");
+
+            // begin accessibility compliance
+
+            /*             $('img.goog-te-gadget-icon').attr('alt', 'Google Translate');
+
+                        $('div#goog-gt-tt div.logo img').attr('alt', 'translate');
+
+                        $('div#goog-gt-tt .original-text').css('text-align', 'left');
+
+                        $('.goog-te-gadget-simple .goog-te-menu-value span').css('color', '#000000');
+
+                        $('.goog-te-combo').attr('aria-label', 'google translate languages');
+
+                        $('svg.goog-te-spinner').attr('title', 'Google Translate Spinner');
+
+                        $('.goog-te-gadget-simple .goog-te-menu-value span').css('color', '#000000'); */
+
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
-<div class="w3-container w3-blue w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">A walkable community has to have useful things for people to walk to.</h1>
-</div>
-
-<!-- Footer -->
-<footer class="w3-container  w3-center w3-opacity">  
- <p>Powered by <a href="https://www.gpcog.org" target="_blank"><img src="images/logos/gpcog.png" alt="GPCOG" class="center" style="width:150px; height:55px;"></a></p>
-</footer>
 
 
-<script>
-var slideIndex = 0;
-showSlides();
+    <!--------------End Google Translate----------------->
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
 
 
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
 
 </body>
+
 </html>

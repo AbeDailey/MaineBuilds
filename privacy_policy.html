@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Coded by Abraham Dailey for Maine Builds 03/12/2022 -->
+<!-- Design based on Start Page template from W3 Schools: https://www.w3schools.com/w3css/tryw3css_templates_start_page.htm -->
+
+<!-- GDPR Privacy Policy Template from: https://gdpr.eu/privacy-notice/ -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Maine Builds Privacy Policy</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHCZQG751W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BHCZQG751W');
+    </script>
+
+    <link rel="stylesheet" href="css_01_formating.css">
+    <link rel="stylesheet" href="css_02_elements.css">
+    <link rel="stylesheet" href="css_03_layout.css">
+    <link rel="stylesheet" href="css_04_colors.css">
+    <link rel="stylesheet" href="css_05_animation.css">
+    <link rel="stylesheet" href="css_06_media_queries.css">
+
+</head>
+
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Arial", sans-serif
+    }
+    
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+    
+    body {
+        top: 0px !important;
+    }
+    
+    img {
+        vertical-align: middle;
+    }
+    /* On smaller screens, decrease text size */
+    
+    @media only screen and (max-width: 300px) {
+        .text {
+            font-size: 11px
+        }
+    }
+</style>
+
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top" style="position:fixed; top:0; left:0; right:0; height:51px;">
+        <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
+            <a href="map.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Map</a>
+            <a href="progress/westbrook.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Progress</a>
+            <a href="upload/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Upload Data</a>
+            <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Request Account</a>
+            <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Contact</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="map.html" class="w3-bar-item w3-button w3-padding-large">Map</a>
+            <a href="progress/westbrook.html" class="w3-bar-item w3-button w3-padding-large">Progress</a>
+            <a href="upload/index.html" class="w3-bar-item w3-button w3-padding-large">Upload Data</a>
+            <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Request Account</a>
+            <a href="mailto:info@mainebuilds.org?subject=Maine Builds Information Request" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-center" alt="A map showing priority centers in the Portland region." style="margin-top:50px; padding: 96px 16px; background-image:url('images/map_home.jpg'); background-size:cover">
+        <h1 class="w3-margin w3-jumbo">Maine Builds</h1>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-container">
+        <div class="w3-content">
+
+            <p>Maine Builds is a project of the
+                <a href 'https://www.gpcog.org">Greater Portland Council of Governments (GPCOG)</a>, in Portland, Maine.  
+                This privacy policy will explain how GPCOG uses the personal data we collect from you when you use our website.</p>
+
+            <p>Topics:</p>
+            <ul>
+                <li>What data do we collect?</li>
+                <li>How do we collect your data?</li>
+                <li>How will we use your data?</li>
+                <li>How do we store your data?</li>
+                <li>Marketing</li>
+                <li>What are your data protection rights?</li>
+                <li>What are cookies?</li>
+                <li>How do we use cookies?</li>
+                <li>What types of cookies do we use?</li>
+                <li>How to manage your cookies</li>
+                <li>Privacy policies of other websites</li>
+                <li>Changes to our privacy policy</li>
+                <li>How to contact us</li>
+                <li>How to contact the appropriate authorities</li>
+            </ul>
+
+
+            <h3 class="w3-text-blue" w3-text-blue>What Data Do We Collect?</h3>
+
+            <p>GPCOG collects the following data:</p>
+            <ul>
+                <li>Personal identification information (Name, email address, phone number, etc.)</li>
+                <li>Data on how users interact with our website</li>
+                <li>Data that users upload to our site</li>
+            </ul>
+
+
+            <h3 class="w3-text-blue">How Do We Collect Your Data?</h3>
+
+            <p>You directly provide GPCOG with most of the data we collect. We collect data and process data when you:</p>
+            <ul>
+                <li>Register online or upload data to our site.</li>
+                <li>Voluntarily complete a customer survey or provide feedback via email.</li>
+                <li>Use or view our website via your browser’s cookies.</li>
+            </ul>
+
+
+            <h3 class="w3-text-blue">How Will We Use Your Data?</h3>
+
+            <p>GPCOG collects your data so that we can:</p>
+            <ul>
+                <li>Process your data and manage your account.</li>
+                <li>Create interactive data visuals to track housing production in our region</li>
+                <li>Email you with information and workshops related to development regulations in Maine.</li>
+            </ul>
+
+            <p>GPCOG does share data that our users voluntarily upload to our website. GPCOG will not sell your data with any third party.</p>
+
+            
+            <h3 class="w3-text-blue">How Do We Store Your Data?</h3>
+
+            <p>GPCOG securely stores your data in our ESRI ArcGIS Online Account and in our Google Analytics account. 
+                These accounts are password protected and can only be accessed by authorized employees of GPCOG.</p>
+
+            <p>GPCOG will keep building permit data that users upload to our site for as long as the Build Maine iniative is active.   
+                Once this time period has expired, we will delete the building permit data that users voluntarily uploaded to our website.</p>
+
+            <p>GPCOG will keep data on how users interact with our site for as long as the Build Maine iniative is active. 
+                Once this time period has expired, we will delete the analytics data from our Google account.</p>
+
+
+            <h3 class="w3-text-blue">Marketing</h3>
+
+            <p>GPCOG would like to send you information about products and services of ours that we think you might like.</p>
+
+            <p>If you have agreed to receive marketing, you may always opt out at a later date.</p>
+
+            <p>You have the right at any time to stop GPCOG from contacting you for marketing purposes.</p>
+
+            <p>If you no longer wish to be contacted for marketing purposes, please click <a href="mailto:info@mainebuilds.org?subject=Maine Builds Marketing Opt-Out">here.</a></p>
+
+
+
+            <h3 class="w3-text-blue">What Are Your Data Protection Rights?</h3>
+
+            <p>GPCOG would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+
+            <p><b>The right to access:</b> You have the right to request GPCOG for copies of your personal data. We may charge you a small fee for this service.</p>
+
+            <p><b>The right to rectification:</b> You have the right to request that GPCOG correct any information you believe is inaccurate. 
+                You also have the right to request GPCOG to complete the information you believe is incomplete.</p>
+
+            <p><b>The right to erasure:</b> You have the right to request that GPCOG erase your personal data, under certain conditions.</p>
+
+            <p><b>The right to restrict processing:</b> You have the right to request that GPCOG restrict the processing of your personal data, under certain conditions.</p>
+
+            <p><b>The right to object to processing:</b> You have the right to object to GPCOG's processing of your personal data, under certain conditions.</p>
+
+                    <p><b>The right to data portability:</b> You have the right to request that GPCOG transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
+
+                    <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: <a href="mailto:info@mainebuilds.org?subject=Maine Builds Data Protection Request">info@MaineBuilds.org</a></p>
+
+
+                    <h3 class="w3-text-blue">Cookies</h3>
+
+                    <p>Cookies are text files placed on your computer to collect standard Internet log information and visitor behavior information. When you visit our websites, we may collect information from you automatically through cookies or similar
+                        technology.
+                    </p>
+
+                    <p>For further information, visit allaboutcookies.org.</p>
+
+
+                    <h3 class="w3-text-blue">How Do We Use Cookies?</h3>
+
+                    <p>Our Company uses cookies in a range of ways to improve your experience on our website, including:</p>
+                    <ul>
+                        <li>Keeping you signed in</li>
+                        <li>Understanding how you use our website</li>
+                    </ul>
+
+
+                    <h3 class="w3-text-blue">What Types of Cookies Do We Use?</h3>
+
+                    <p>Our website uses cookies so that we recognize you on our website and remember your previously selected preferences. These could include what language you prefer and location you are in. A mix of first-party and third-party cookies
+                        are used.</p>
+
+
+                    <h3 class="w3-text-blue">How to Manage Cookies</h3>
+
+                    <p>You can set your browser not to accept cookies, and the above website tells you how to remove cookies from your browser. However, in a few cases, some of our website features may not function as a result.</p>
+
+
+                    <h3 class="w3-text-blue">Privacy Policies of Other Websites</h3>
+
+                    <p>The Maine Builds and GPCOG websites contain links to other websites. Our privacy policy applies only to our website, so if you click on a link to another website, you should read their privacy policy.</p>
+
+
+
+                    <h3 class="w3-text-blue">Changes to Our Privacy Policy</h3>
+
+                    <p>GPCOG keeps its privacy policy under regular review and places any updates on this web page. This privacy policy was last updated on March 14, 2022.</p>
+
+
+
+                    <h3 class="w3-text-blue">How to Contact Us</h3>
+
+                    <p>If you have any questions about GPCOG's privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.</p>
+
+                    <p>Email us at: <a href="mailto:info@mainebuilds.org?subject=Maine Builds Data Protection Inquiry">info@MaineBuilds.org</a></p>
+
+
+
+                    <h3 class="w3-text-blue">How to Contact the Appropriate Authority</h3>
+
+                    <p>Should you wish to report a complaint or if you feel that GPCOG has not addressed your concern in a satisfactory manner, you may contact GPCOG's Public Information Officer.</p>
+
+                    <p>Email: <a href="mailto:tbell@GPCOG.org?subject=Maine Builds Data Protection Inquiry">tbell@GPCOG.org</a></p>
+
+
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="w3-bar w3-blue w3-center " style="position: absolute;">
+        <p class="w3-center">Powered by
+            <a href="https://www.gpcog.org" target="_blank"><img src="images/logos/gpcog_white.png" alt="GPCOG" class="center" style="width:150px; height:55px;"></a>
+        </p>
+
+        <div class="w3-row-padding w3-padding-16 w3-container">
+            <div class="w3-content">
+                <div class="w3-third">
+                    <a href="website_accessibility.html">Accessibility</a>
+                </div>
+                <div class="w3-third">
+                    <a href="privacy_policy.html">Privacy Policy</a>
+                </div>
+                <div class="w3-third">
+                    <a href="license.html">License</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!----------Google Translate (Mobile Friendly)--------->
+
+    <style>
+        #google-translate-container {
+            float: right;
+            padding: 3px 5px 0px 0px;
+        }
+        
+        .goog-te-combo,
+        .goog-te-banner *,
+        .goog-te-ftab *,
+        .goog-te-menu *,
+        .goog-te-menu2 *,
+        .goog-te-balloon * {
+            font-family: arial;
+            font-size: 10pt;
+            background-image: url("images/Google.png");
+            background-position: 3px 4px;
+            background-size: 22px;
+            background-repeat: no-repeat;
+            text-indent: 20px;
+            background-color: #fff;
+            color: #000 !important;
+        }
+        
+        .goog-logo-link {
+            display: none !important;
+        }
+        
+        .goog-te-gadget {
+            color: transparent !important;
+        }
+        
+        .goog-te-gadget .goog-te-combo {
+            margin: 2px 0 !important;
+            border-radius: 15px !important;
+        }
+        
+        .goog-te-combo {
+            border: 1px solid !important;
+            border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;
+            border-radius: 0 !important;
+            height: 32px;
+            !important;
+            padding: 0 1px 0 .25rem !important;
+        }
+        
+        #launcher-wrapper {
+            bottom: 50px !important;
+        }
+    </style>
+
+    <div id="google-translate-container">
+
+        <div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"></div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+
+            new google.translate.TranslateElement({
+                pageLanguage: "en",
+                autoDisplay: false,
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, "google_translate_element");
+
+            // begin accessibility compliance
+
+            /*             $('img.goog-te-gadget-icon').attr('alt', 'Google Translate');
+
+                        $('div#goog-gt-tt div.logo img').attr('alt', 'translate');
+
+                        $('div#goog-gt-tt .original-text').css('text-align', 'left');
+
+                        $('.goog-te-gadget-simple .goog-te-menu-value span').css('color', '#000000');
+
+                        $('.goog-te-combo').attr('aria-label', 'google translate languages');
+
+                        $('svg.goog-te-spinner').attr('title', 'Google Translate Spinner');
+
+                        $('.goog-te-gadget-simple .goog-te-menu-value span').css('color', '#000000'); */
+
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+    <!--------------End Google Translate----------------->
+
+</body>
+
+</html>

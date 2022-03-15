@@ -1,143 +1,75 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-$page_redirected_from = $_SERVER['REQUEST_URI'];  // this is especially useful with error 404 to indicate the missing page.
-$server_url = "http://" . $_SERVER["SERVER_NAME"] . "/";
-$redirect_url = $_SERVER["REDIRECT_URL"];
-$redirect_url_array = parse_url($redirect_url);
-$end_of_path = strrchr($redirect_url_array["path"], "/");
+<!-- Coded by Abraham Dailey for Maine Builds 03/14/2022 -->
+<!-- Based on Start Page template from W3 Schools: https://www.w3schools.com/w3css/tryw3css_templates_start_page.htm -->
 
-switch(getenv("REDIRECT_STATUS"))
-{
-	# "400 - Bad Request"
-	case 400:
-	$error_code = "400 - Bad Request";
-	$explanation = "The syntax of the URL submitted by your browser could not be understood. Please verify the address and try again.";
-	$redirect_to = "";
-	break;
 
-	# "401 - Unauthorized"
-	case 401:
-	$error_code = "401 - Unauthorized";
-	$explanation = "This section requires a password or is otherwise protected. If you feel you have reached this page in error, please return to the login page and try again, or contact the webmaster if you continue to have problems.";
-	$redirect_to = "";
-	break;
-
-	# "403 - Forbidden"
-	case 403:
-	$error_code = "403 - Forbidden";
-	$explanation = "This section requires a password or is otherwise protected. If you feel you have reached this page in error, please return to the login page and try again, or contact the webmaster if you continue to have problems.";
-	$redirect_to = "";
-	break;
-
-	# "404 - Not Found"
-	case 404:
-	$error_code = "404 - Not Found";
-	$explanation = "The requested resource '" . $page_redirected_from . "' could not be found on this server. Please verify the address and try again.";
-	$redirect_to = "";
-	break;
-}
-?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
-	
-	
-	
-	
-	
-<?php
-	if ($redirect_to != "")
-	{
-?>
+    <title>Maine Builds Accessibility</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-	<meta http-equiv="Refresh" content="5; url='<?php print($redirect_to); ?>'">
-<?php
-	}
-?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHCZQG751W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-	<title>Page not found <?php print ($redirect_to); ?></title>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
+        gtag('config', 'G-BHCZQG751W');
+    </script>
 
-    <link rel="stylesheet" href="../css_01_formating.css">
-    <link rel="stylesheet" href="../css_02_elements.css">
-    <link rel="stylesheet" href="../css_03_layout.css">
-    <link rel="stylesheet" href="../css_04_colors.css">
-    <link rel="stylesheet" href="../css_05_animation.css">
-    <link rel="stylesheet" href="../css_06_media_queries.css">
-
+    <link rel="stylesheet" href="css_01_formating.css">
+    <link rel="stylesheet" href="css_02_elements.css">
+    <link rel="stylesheet" href="css_03_layout.css">
+    <link rel="stylesheet" href="css_04_colors.css">
+    <link rel="stylesheet" href="css_05_animation.css">
+    <link rel="stylesheet" href="css_06_media_queries.css">
 
 </head>
 
-
-
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif}
-  .goog-te-banner-frame.skiptranslate {
-    display: none !important;
-    } 
-
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Arial", sans-serif
+    }
+    
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+    
     body {
-    top: 0px !important; 
-    }
-
-img {vertical-align: middle;}
-
-    /* Slideshow container */
-    
-    .slideshow-container {
-        max-width: 500px;
-        position: relative;
-        margin: auto;
+        top: 0px !important;
     }
     
-    .active {
-        background-color: #717171;
+    img {
+        vertical-align: middle;
     }
-    /* Fading animation */
+    /* On smaller screens, decrease text size */
     
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.0s;
-        animation-name: fade;
-        animation-duration: 1.0s;
-    }
-    
-    @-webkit-keyframes fade {
-        from {
-            opacity: .8
-        }
-        to {
-            opacity: 1
+    @media only screen and (max-width: 300px) {
+        .text {
+            font-size: 11px
         }
     }
-    
-    @keyframes fade {
-        from {
-            opacity: .8
-        }
-        to {
-            opacity: 1
-        }
-    }
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
 </style>
-
-
 
 
 <body>
 
-<!-- Navbar -->
-<div class="w3-top" style="position:fixed; top:0; left:0; right:0; height:51px;">
+    <!-- Navbar -->
+    <div class="w3-top" style="position:fixed !important; top:0 !important; left:0 !important; right:0!important; height:51px !important;">
         <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-gray">Home</a>
@@ -158,51 +90,59 @@ img {vertical-align: middle;}
         </div>
     </div>
 
-    <header class="w3-container w3-center" style="margin-top:50px; padding: 96px 16px; background-image:url('images/map_home.jpg'); background-size:cover">
+    <!-- Header -->
+    <header class="w3-container w3-center" alt="A map showing priority centers in the Portland region." style="margin-top:50px; padding: 96px 16px; background-image:url('images/map_home.jpg'); background-size:cover">
         <h1 class="w3-margin w3-jumbo">Maine Builds</h1>
     </header>
 
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <!--<div class="w3-content">-->
-  <div class="w3-container  w3-center">
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-container">
+        <div class="w3-content">
 
-	<h1>Error Code <?php print ($error_code); ?></h1>
+            <p>If you use assistive technology (such as a Braille reader, or a screen reader) and the format of any material on this website interferes with your ability to access information, please <a href="mailto:info@mainebuilds.org?subject=Maine Builds Accessibility Feedback">contact us</a>.
+                To enable us to respond in a manner most helpful to you, please indicate the nature of your accessibility problem, the preferred format in which to receive the material, the web address of the requested material, and your contact information.</p>
 
-	<p class="w3-text-grey">We were not able to find the <a href="http://en.wikipedia.org/wiki/Uniform_resource_locator">URL</a> you requested. 
+            <h3 class="w3-text-blue">Accessibility Design Guidelines</h3>
 
-	<br> 
+            <p>Our website has been designed with the following accessibility guidelines in mind:</p>
+            <ul>
+                <li>We work to comply with <a href="https://www.section508.gov/" target="_blank">Section 508</a> as well as <a href="https://www.w3.org/WAI/intro/wcag" target="_blank">WCAG 2.0 A and AA</a> referring to website accessibility standards.</li>
+                <li>If you have difficulty accessing the site or have any comments or feedback, please do not hesitate to <a href="mailto:info@mainebuilds.org?subject=Maine Builds Accessibility Feedback">contact us</a>.</li>
+            </ul>
 
-	<br> 
+            <h3 class="w3-text-blue" w3-text-blue>Browser Accessibility Information</h3>
 
-	<?PHP echo($explanation); ?>
-	</p>
+            <p>Many popular browsers contain built-in accessibility tools.</p>
+            <ul>
+                <li><a href="https://www.google.com/accessibility/all-products-features.html" target=_blank>Chrome Accessibility Information</a></li>
+                <li><a href="https://www.accessfirefox.org/" target=_blank>Firefox Accessibility Information</a></li>
+                <li><a href="https://docs.microsoft.com/en-us/microsoft-edge/accessibility/" target=_blank>Microsoft Edge Accessibility Information</a></li>
+                <li><a href="https://support.apple.com/accessibility">Safari Accessibility Information</a></li>
+            </ul>
+
+            <h3 class="w3-text-blue">Additional Plug-ins</h3>
+
+            <p>Adobe Reader is required to view and print PDF documents that appear on this website.</p>
+            <ul>
+                <li>To download this program for free, visit the <a href="https://www.adobe.com/products/reader.html" target="_blank">Adobe website</a>.</li>
+                <li>To read PDF documents with a screen reader, please visit the <a href="https://www.adobe.com/accessibility/products/reader/" target="_blank">Adobe Reader Accessibility website</a> which provides useful tools and resources.</li>
+            </ul>
+
+            <h3 class="w3-text-blue">Supported Assistive Technology</h3>
+
+            <ul>
+                <li>Latest Version of <a href="https://www.freedomscientific.com/Products/Blindness/JAWS" target="_blank">JAWS</a> for Windows</li>
+                <li>Latest Version of <a href="https://www.nvaccess.org" target="_blank">NVDA</a> for Windows</li>
+                <li>Latest Version of <a href="https://www.apple.com/accessibility/vision/" target="_blank">VoiceOver</a> for Mac OS X</li>
+                <li>Keyboard-Only Navigation</li>
+            </ul>
+
+        </div>
+    </div>
 
 
-	<p class="w3-text-grey">You may want to try starting from the home page: <a href="<?php print ($server_url); ?>"><?php print ($server_url); ?></a></p>
-
-
-	<p class="w3-text-grey">Or, consider these alternatives:</p>
-
-
-    	<div class="slideshow-container">
-
-			<div class="mySlides fade" alt="A slideshow showing 3 alternative development scenarios">
- 				<img src="images/houses/5.jpg" alt="A picture of one development scenario." style="width:309px; height:343px;">
-			</div>
-			<div class="mySlides fade">
- 				<img src="images/houses/6.jpg" alt="A picture of an alternative development scenario." style="width:309px; height:343px;">
-			</div>
-
-			<div class="mySlides fade">
- 				<img src="images/houses/8.jpg" alt="A picture of a third development scenario." style="width:309px; height:343px;">
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<footer class="w3-bottom w3-container w3-blue w3-center ">
+    <!-- Footer -->
+    <footer class="w3-bar w3-blue w3-center " style="position: absolute;">
         <p class="w3-center">Powered by
             <a href="https://www.gpcog.org" target="_blank"><img src="images/logos/gpcog_white.png" alt="GPCOG" class="center" style="width:150px; height:55px;"></a>
         </p>
@@ -224,9 +164,9 @@ img {vertical-align: middle;}
     </footer>
 
 
- <!----------Google Translate (Mobile Friendly)--------->
+    <!----------Google Translate (Mobile Friendly)--------->
 
- <style>
+    <style>
         #google-translate-container {
             float: right;
             padding: 3px 5px 0px 0px;
@@ -317,34 +257,7 @@ img {vertical-align: middle;}
 
     <!--------------End Google Translate----------------->
 
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
 
 </body>
+
 </html>

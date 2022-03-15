@@ -36,7 +36,8 @@ main,
 menu,
 nav,
 section {
-    display: block
+    display: block;
+    /* vertical-align: top; */
 }
 
 summary {
